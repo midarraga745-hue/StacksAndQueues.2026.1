@@ -1,10 +1,9 @@
 ﻿namespace StacksAndQueues.Backend;
 
-public class StackUsingArray<T>
+public class StackUsingArray<T> : IStack<T>
 {
     private T[] _stack;
     private int _top;
-
 
     public StackUsingArray(int capacity)
     {
@@ -38,7 +37,4 @@ public class StackUsingArray<T>
         }
         return _stack[_top--];
     }
-
 }
-
-

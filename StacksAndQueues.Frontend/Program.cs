@@ -1,6 +1,6 @@
 ﻿using StacksAndQueues.Backend;
 
-var stack = new StackUsingArray<string>(5);
+var stack = new StackUsingList<string>();
 var option = string.Empty;
 
 do
@@ -14,7 +14,9 @@ do
             stack.Push(element);
             Console.WriteLine($"Elemento '{element}' apilado.");
             break;
+
         case "2":
+
             try
             {
                 var poppedElement = stack.Pop();
@@ -25,6 +27,7 @@ do
                 Console.WriteLine(ex.Message);
             }
             break;
+
         case "3":
             try
             {
@@ -36,9 +39,11 @@ do
                 Console.WriteLine(ex.Message);
             }
             break;
+
         case "0":
             Console.WriteLine("Saliendo del programa...");
             break;
+
         default:
             Console.WriteLine("Opción no válida. Por favor, intente de nuevo.");
             break;
